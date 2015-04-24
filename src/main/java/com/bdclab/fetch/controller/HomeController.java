@@ -5,9 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.math.BigInteger;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.security.SecureRandom;
@@ -28,6 +26,7 @@ import com.bdclab.fetch.dao.WeiboContentTaskDAO;
 import com.bdclab.fetch.model.CSVReader;
 import com.bdclab.fetch.model.WeiboContentSearchPara;
 import com.bdclab.fetch.model.WeiboContentTaskItem;
+import com.bdclab.fetch.reference.Constant;
 
 /**
  * Handles requests for the application home page.
@@ -56,11 +55,15 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
-	public String upload(@RequestParam("name") String projectName,
+	public String upload(@RequestParam("name") String projectName, @RequestParam("token") String dailyToken,
 			@RequestParam("file") MultipartFile file, @ModelAttribute("mapping1Form") final Object mapping1FormObject,
 	        final BindingResult mapping1BindingResult,
 	        final Model model,
 	        final RedirectAttributes redirectAttributes) {
+		
+		if (!dailyToken.equals(Constant.BDC_DAILY_TOKEN)) {
+			return "redirect:/upload";
+		}
 
 		if (!file.isEmpty()) {
 			try {

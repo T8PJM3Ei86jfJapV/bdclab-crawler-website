@@ -106,6 +106,13 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="inputToken" class="col-sm-2 control-label">Token：</label>
+				<div class="col-sm-10">
+					<input type="text" name="token" class="form-control" id="inputToken"
+						placeholder="请通过后台获取口令">
+				</div>
+			</div>
+			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					<div class="checkbox">
 						<label> <input type="checkbox"> 加急处理
