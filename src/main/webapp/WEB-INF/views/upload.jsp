@@ -82,7 +82,7 @@
 		</div>
 
 		<div class="jumbotron">
-			<p>1、点击<a href="../static/templates/weibo_search_template.csv" target="_blank">这里</a>下载模板</p>
+			<p>1、点击<a href="../static/templates/weibo_search_template.csv" target="_blank">这里</a>下载模板，点击<a href="../static/templates/weibo_search_example.csv" target="_blank">这里</a>下载示例，点击<a href="../static/templates/weibo_city_code.csv" target="_blank">这里</a>下载省市编码</p>
 			<p>2、建议在Mac下填写并提交csv</p>
 			<p>3、提交时需要Token认证，请通过微信公众号后台获取</p>
 			<p>4、提交后成功会返回提交编号，请记录用于查询执行结果</p>
