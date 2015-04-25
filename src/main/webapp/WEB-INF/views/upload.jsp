@@ -81,6 +81,13 @@
 			<span class="sr-only">Error:</span> 请认真阅读说明，严格按照文件编码及格式要求提交。
 		</div>
 
+		<div class="jumbotron">
+			<p>1、点击<a href="../static/templates/weibo_search_template.csv" target="_blank">这里</a>下载模板</p>
+			<p>2、建议在Mac下填写并提交csv</p>
+			<p>3、提交时需要Token认证，请通过微信公众号后台获取</p>
+			<p>4、提交后成功会返回提交编号，请记录用于查询执行结果</p>
+		</div>
+
 		<!-- 
 		<form method="POST" action="upload" enctype="multipart/form-data">
 			选择文件：<input type="file" name="file"><br /> 项目名称：<input
@@ -89,7 +96,7 @@
 				class="btn btn-default btn-lg btn-block">提交</button>
 		</form>
  		-->
- 
+
 		<form class="form-horizontal" method="POST" action="upload"
 			enctype="multipart/form-data">
 			<div class="form-group">
@@ -101,15 +108,15 @@
 			<div class="form-group">
 				<label for="inputTaskName" class="col-sm-2 control-label">项目名称：</label>
 				<div class="col-sm-10">
-					<input type="text" name="name" class="form-control" id="inputTaskName"
-						placeholder="可留空">
+					<input type="text" name="name" class="form-control"
+						id="inputTaskName" placeholder="可留空">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputToken" class="col-sm-2 control-label">Token：</label>
 				<div class="col-sm-10">
-					<input type="text" name="token" class="form-control" id="inputToken"
-						placeholder="请通过后台获取口令">
+					<input type="text" name="token" class="form-control"
+						id="inputToken" placeholder="请通过后台获取口令">
 				</div>
 			</div>
 			<div class="form-group">
